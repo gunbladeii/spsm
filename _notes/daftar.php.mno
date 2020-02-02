@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><info>	<infoitem key="UD_daftarSubjek" value="name:id;datatype:int,name:subjek;datatype:string,name:tahun;datatype:year,name:dataReg;datatype:timestamp" />	<infoitem key="UD_daftarAliran" value="name:id;datatype:int,name:aliran;datatype:string,name:tahun;datatype:year,name:dataReg;datatype:timestamp" /></info>

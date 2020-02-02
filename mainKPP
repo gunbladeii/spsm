@@ -1,0 +1,279 @@
+<?php require_once('Connections/ePenilai.php'); ?>
+<?php
+if (!isset($_SESSION)) {
+  session_start();
+}
+$MM_authorizedUsers = "pp";
+$MM_donotCheckaccess = "false";
+
+// *** Restrict Access To Page: Grant or deny access to this page
+function isAuthorized($strUsers, $strGroups, $UserName, $UserGroup) { 
+  // For security, start by assuming the visitor is NOT authorized. 
+  $isValid = False; 
+
+  // When a visitor has logged into this site, the Session variable MM_Username set equal to their username. 
+  // Therefore, we know that a user is NOT logged in if that Session variable is blank. 
+  if (!empty($UserName)) { 
+    // Besides being logged in, you may restrict access to only certain users based on an ID established when they login. 
+    // Parse the strings into arrays. 
+    $arrUsers = Explode(",", $strUsers); 
+    $arrGroups = Explode(",", $strGroups); 
+    if (in_array($UserName, $arrUsers)) { 
+      $isValid = true; 
+    } 
+    // Or, you may restrict access to only certain users based on their username. 
+    if (in_array($UserGroup, $arrGroups)) { 
+      $isValid = true; 
+    } 
+    if (($strUsers == "") && false) { 
+      $isValid = true; 
+    } 
+  } 
+  return $isValid; 
+}
+
+$MM_restrictGoTo = "main_menu.php";
+if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers, $_SESSION['MM_Username'], $_SESSION['MM_UserGroup'])))) {   
+  $MM_qsChar = "?";
+  $MM_referrer = $_SERVER['PHP_SELF'];
+  if (strpos($MM_restrictGoTo, "?")) $MM_qsChar = "&";
+  if (isset($_SERVER['QUERY_STRING']) && strlen($_SERVER['QUERY_STRING']) > 0) 
+  $MM_referrer .= "?" . $_SERVER['QUERY_STRING'];
+  $MM_restrictGoTo = $MM_restrictGoTo. $MM_qsChar . "accesscheck=" . urlencode($MM_referrer);
+  header("Location: ". $MM_restrictGoTo); 
+  exit;
+}
+?>
+<?php session_start();?>
+<?php
+if (!function_exists("GetSQLValueString")) {
+function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
+{
+  if (PHP_VERSION < 6) {
+    $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+  }
+
+  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+
+  switch ($theType) {
+    case "text":
+      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+      break;    
+    case "long":
+    case "int":
+      $theValue = ($theValue != "") ? intval($theValue) : "NULL";
+      break;
+    case "double":
+      $theValue = ($theValue != "") ? doubleval($theValue) : "NULL";
+      break;
+    case "date":
+      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+      break;
+    case "defined":
+      $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
+      break;
+  }
+  return $theValue;
+}
+}
+
+$colname_Recordset2 = "-1";
+if (isset($_SESSION['MM_Username'])) {
+  $colname_Recordset2 = $_SESSION['MM_Username'];
+}
+mysql_select_db($database_ePenilai, $ePenilai);
+$query_Recordset2 = sprintf("SELECT * FROM login WHERE noIC = %s", GetSQLValueString($colname_Recordset2, "text"));
+$Recordset2 = mysql_query($query_Recordset2, $ePenilai) or die(mysql_error());
+$row_Recordset2 = mysql_fetch_assoc($Recordset2);
+$totalRows_Recordset2 = mysql_num_rows($Recordset2);
+
+$colname_dataSubjek = "-1";
+if (isset($_SESSION['MM_Username'])) {
+  $colname_dataSubjek = $_SESSION['MM_Username'];
+}
+mysql_select_db($database_ePenilai, $ePenilai);
+$query_dataSubjek = sprintf("SELECT * FROM dataSubjekPP WHERE noIC = %s", GetSQLValueString($colname_dataSubjek, "text"));
+$dataSubjek = mysql_query($query_dataSubjek, $ePenilai) or die(mysql_error());
+$row_dataSubjek = mysql_fetch_assoc($dataSubjek);
+$totalRows_dataSubjek = mysql_num_rows($dataSubjek);
+
+mysql_select_db($database_ePenilai, $ePenilai);
+$query_daftarAliran = "SELECT * FROM daftarAliran";
+$daftarAliran = mysql_query($query_daftarAliran, $ePenilai) or die(mysql_error());
+$row_daftarAliran = mysql_fetch_assoc($daftarAliran);
+$totalRows_daftarAliran = mysql_num_rows($daftarAliran);
+
+mysql_select_db($database_ePenilai, $ePenilai);
+$query_daftarTingkatan = "SELECT * FROM daftarTingkatan";
+$daftarTingkatan = mysql_query($query_daftarTingkatan, $ePenilai) or die(mysql_error());
+$row_daftarTingkatan = mysql_fetch_assoc($daftarTingkatan);
+$totalRows_daftarTingkatan = mysql_num_rows($daftarTingkatan);
+
+mysql_select_db($database_ePenilai, $ePenilai);
+$query_daftarTahun = "SELECT * FROM dataBengkel GROUP BY tahun ASC";
+$daftarTahun = mysql_query($query_daftarTahun, $ePenilai) or die(mysql_error());
+$row_daftarTahun = mysql_fetch_assoc($daftarTahun);
+$totalRows_daftarTahun = mysql_num_rows($daftarTahun);
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paparan Admin</title>
+
+    
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="SpryAssets/SpryValidationSelect.js" type="text/javascript"></script>
+    <script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="SpryAssets/SpryValidationSelect.css" rel="stylesheet" type="text/css" />
+    <link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+   <script>
+  $( function() {
+    $( "#tarikh" ).datepicker();
+  } );
+    </script>
+  
+</head>
+
+<body>
+                   <div class="container">
+                   <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                        <a></a>
+                            <h1>Penyelaras Projek:<br/> <?php echo strtoupper($row_Recordset2['nama']); ?>
+                            </h1>
+                            <div class="description">
+                            	<p>
+	                            	Ruangan ini digunakan untuk kemudahan penyelaras projek untuk menyemak dan mengesah data penilai yang telah berdaftar melalui sistem ini. 
+                            	</p>
+                            </div>
+                        </div>
+                    </div>
+
+<form name="prosesSemakan" method="post" action="viewMainPP.php">
+
+   <?php /*?><div class="form-group">
+<label for="mesyuarat" class="control-label">Mesyuarat/Kursus/Bengkel:</label>
+<span id="spryselect1">
+<select name="mesyuarat" class="form-control" id="mesyuarat">
+  <option value="" >Mesyuarat/Kursus/Bengkel</option>
+  <option value="Bengkel Kerja Penyediaan Penilai" >Bengkel Kerja Penyediaan Penilai</option>
+  <option value="Bengkel Kerja Penambahbaikan PMS" >Bengkel Kerja Penambahbaikan PMS</option>
+  <option value="Bengkel Kerja Penyemakan Pembetulan PMS" >Bengkel Kerja Penyemakan Pembetulan PMS</option>
+  <option value="Bengkel Kerja Penyemakan NSK" >Bengkel Kerja Penyemakan NSK</option>
+</select>
+<span class="selectRequiredMsg">Sila buat pilihan</span></span></div><?php */?>
+
+    <div class="form-group"> <!-- Zip Code-->
+		<label for="tahun" class="control-label"></label>
+		<span id="spryselect1">
+		<select name="tahun" class="form-control" id="tahun">
+		  <option value="">Pilih Tahun</option>
+		  <?php
+do {  
+?>
+		  <option value="<?php echo $row_daftarTahun['tahun']?>"><?php echo $row_daftarTahun['tahun']?></option>
+		  <?php
+} while ($row_daftarTahun = mysql_fetch_assoc($daftarTahun));
+  $rows = mysql_num_rows($daftarTahun);
+  if($rows > 0) {
+      mysql_data_seek($daftarTahun, 0);
+	  $row_daftarTahun = mysql_fetch_assoc($daftarTahun);
+  }
+?>
+	    </select>
+		<span class="selectRequiredMsg">Sila Pilih Tahun.</span></span></div>
+   
+    <div class="form-group"> <!-- Zip Code-->
+		<label for="subjek" class="control-label"></label>
+		<span id="spryselect2">
+		<select name="subjekPP" class="form-control" id="subjekPP">
+		  <option value="">Pilih Judul</option>
+		  <?php
+do {  
+?>
+		  <option value="<?php echo $row_dataSubjek['subjekPP']?>"><?php echo $row_dataSubjek['subjekPP']?></option>
+		  <?php
+} while ($row_dataSubjek = mysql_fetch_assoc($dataSubjek));
+  $rows = mysql_num_rows($dataSubjek);
+  if($rows > 0) {
+      mysql_data_seek($dataSubjek, 0);
+	  $row_dataSubjek = mysql_fetch_assoc($dataSubjek);
+  }
+?>
+        </select>
+		<span class="selectRequiredMsg">Sila buat pilihan.</span></span></div>	
+    
+    <div class="form-group"> 
+    <label for="subjek" class="control-label"></label>
+    <span id="spryselect3">
+    <select name="aliranPP" id="aliranPP" class="form-control">
+      <option value="">Pilih Aliran</option>
+      <?php
+do {  
+?>
+      <option value="<?php echo $row_daftarAliran['aliran']?>"><?php echo $row_daftarAliran['aliran']?></option>
+      <?php
+} while ($row_daftarAliran = mysql_fetch_assoc($daftarAliran));
+  $rows = mysql_num_rows($daftarAliran);
+  if($rows > 0) {
+      mysql_data_seek($daftarAliran, 0);
+	  $row_daftarAliran = mysql_fetch_assoc($daftarAliran);
+  }
+?>
+      
+    </select>
+    <span class="selectRequiredMsg">Sila buat pilihan.</span></span></div>
+   
+   <?php /*?><label for="subjek" class="control-label">Tingkatan:</label>
+   <div class="form-group"> <!-- Submit Button -->
+		<select name="tingkatan" id="tingkatan" class="form-control">
+		  <option value="">Pilih Tingkatan</option>
+		  <?php
+do {  
+?>
+		  <option value="<?php echo $row_daftarTingkatan['tingkatan']?>"><?php echo $row_daftarTingkatan['tingkatan']?></option>
+		  <?php
+} while ($row_daftarTingkatan = mysql_fetch_assoc($daftarTingkatan));
+  $rows = mysql_num_rows($daftarTingkatan);
+  if($rows > 0) {
+      mysql_data_seek($daftarTingkatan, 0);
+	  $row_daftarTingkatan = mysql_fetch_assoc($daftarTingkatan);
+  }
+?>
+        </select><?php */?>
+	</div> 
+  
+  <div class="form-group"> <!-- Submit Button -->
+		
+        <button type="submit" name="submit" class="btn btn-primary">Carian Maklumat</button>
+        <a href="index.php"><button type="button" name="submit" class="btn btn-primary"><img src="http://lh3.ggpht.com/A0x3jzuH1qRkE10HcTiT4qQr_6iAqVg-CTsoIqxnoIFyv92V91WI3KqiVlOvLtfoMRg=w300" width="20" height="20"></button></a>
+	</div> 
+    
+</form>
+
+<script type="text/javascript">
+var spryselect2 = new Spry.Widget.ValidationSelect("spryselect2");
+var spryselect3 = new Spry.Widget.ValidationSelect("spryselect3");
+var spryselect1 = new Spry.Widget.ValidationSelect("spryselect1");
+</script>
+</body>
+</html>
+<?php
+mysql_free_result($Recordset2);
+
+mysql_free_result($dataSubjek);
+
+mysql_free_result($daftarAliran);
+
+mysql_free_result($daftarTingkatan);
+
+mysql_free_result($daftarTahun);
+?>
