@@ -173,7 +173,7 @@
 	<div id="team" class="section md-padding">
                 <!-- Section header -->
 				<div class="section-header text-center">
-					<h2 class="title"><a font-color:white;>Pengurusan SPBT</a></h2>
+					<h2 class="title"><a font-color:white;>Team Sektor Penghasilan Buku Teks</a></h2>
 				</div>
 				<!-- /Section header -->
 		<!-- Background Image -->
