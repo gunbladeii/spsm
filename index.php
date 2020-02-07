@@ -54,7 +54,7 @@
 					<div class="navbar-brand">
 						<a href="index.php">
 							<img class="logo" src="img/logokpm.png" alt="logo">
-							<img class="logo-alt" src="img/logo-alt.png" alt="logo">
+							<img class="logo-alt" src="img/logokpm.png" alt="logo">
 						</a>
 					</div>
 					<!-- /Logo -->
