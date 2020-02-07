@@ -173,7 +173,7 @@
 	<div id="team" class="section md-padding">
                 <!-- Section header -->
 				<div class="section-header text-center">
-					<h2 class="title"><a font-color:white;>Pengurusan SPSM</a></h2>
+					<h2 class="title"><a font-color:white;>Pengurusan SPBT</a></h2>
 				</div>
 				<!-- /Section header -->
 		<!-- Background Image -->
@@ -195,8 +195,8 @@
 						<!-- testimonial -->
 						<div class="testimonial">
 							<div class="testimonial-meta">
-								<img src="./img/kpp.png" alt="">
-								<h3 class="white-text">Encik Shaiful Hasnan bin Abdul Hamid</h3>
+								<img src="#" alt="">
+								<h3 class="white-text">Dr Zainal Rashid bin Kamaruddin</h3>
 								<span>Ketua Penolong Pengarah</span>
 							</div>
 							<p class="white-text">shaiful.abdul@moe.gov.my</p>
@@ -206,9 +206,9 @@
 						<!-- testimonial -->
 						<div class="testimonial">
 							<div class="testimonial-meta">
-								<img src="./img/ku_ss.png" alt="">
+								<img src=".#" alt="">
 								<h3 class="white-text">Datin Noriza binti Asmuni</h3>
-								<span>Ketua Unit Sains Sosial</span>
+								<span>KPP Sains Sosial</span>
 							</div>
 							<p class="white-text">noriza.asmuni@moe.gov.my</p>
 						</div>
@@ -217,9 +217,9 @@
                         <!-- testimonial -->
 						<div class="testimonial">
 							<div class="testimonial-meta">
-								<img src="./img/ku_bahasa.png" alt="">
+								<img src="#" alt="">
 								<h3 class="white-text">Puan Roslina binti Ibrahim</h3>
-								<span>KU Bahasa & Kesusasteraan</span>
+								<span>KPP Bahasa & Kesusasteraan</span>
 							</div>
 							<p class="white-text">roslina.ibrahim@moe.gov.my</p>
 						</div>
@@ -228,9 +228,9 @@
                         <!-- testimonial -->
 						<div class="testimonial">
 							<div class="testimonial-meta">
-								<img src="./img/ku_upi.png" alt="">
+								<img src="#" alt="">
 								<h3 class="white-text">Encik Nasir bin Mohamad</h3>
-								<span>Ketua Unit Pendidikan Islam</span>
+								<span>KPP Pendidikan Islam</span>
 							</div>
 							<p class="white-text">nasirm@moe.gov.my</p>
 						</div>
@@ -239,11 +239,11 @@
                         <!-- testimonial -->
 						<div class="testimonial">
 							<div class="testimonial-meta">
-								<img src="./img/ku_votek.png" alt="">
-								<h3 class="white-text">Encik Rafiy bin Saleh</h3>
-								<span>Ketua Unit Vokasional dan Teknik</span>
+								<img src="#" alt="">
+								<h3 class="white-text">Puan Zurinah binti Rajab</h3>
+								<span>KPP Vokasional dan Teknik</span>
 							</div>
-							<p class="white-text">rafiys@moe.gov.my</p>
+							<p class="white-text">zurin@moe.gov.my</p>
 						</div>
 						<!-- /testimonial -->
                         
