@@ -95,7 +95,7 @@
 					<!-- home content -->
 					<div class="col-md-10 col-md-offset-1">
 						<div class="home-content">
-							<h1 class="white-text">e-Penilai</h1>
+							<h1 class="white-text">epenilai Buku Teks KPM</h1>
 							<p class="white-text">Pembangunan aplikasi ini bertujuan untuk memudahkan urusan pendaftaran bakal penilai dan penilai buku teks dalam setiap urusan mesyuarat/bengkel yang dijalankan. Diharap dapat memberi manfaat kepada semua pihak yang terlibat sebagai pengguna dalam aplikasi ini. Terima kasih.
 							</p>
 				    </div>
@@ -352,7 +352,7 @@
 
 					<!-- footer logo -->
 					<div class="footer-logo">
-						<a href="index.php"><img src="img/logo-alt.png" alt="logo"></a>
+						<a href="index.php"><img src="img/logokpm.png" alt="logo"></a>
 					</div>
 					<!-- /footer logo -->
 
