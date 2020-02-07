@@ -250,7 +250,7 @@
                         <!-- testimonial -->
 						<div class="testimonial">
 							<div class="testimonial-meta">
-								<img src="./img/ku_sm.png" alt="">
+								<img src="#" alt="">
 								<h3 class="white-text">Puan Rozita binti Ayob</h3>
 								<span>KPP Vokasional dan Teknik</span>
 							</div>
