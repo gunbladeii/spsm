@@ -251,10 +251,10 @@
 						<div class="testimonial">
 							<div class="testimonial-meta">
 								<img src="./img/ku_sm.png" alt="">
-								<h3 class="white-text">Puan Nani Herlin binti Jamin</h3>
-								<span>KU Sains dan Matematik</span>
+								<h3 class="white-text">Puan Rozita binti Ayob</h3>
+								<span>KPP Vokasional dan Teknik</span>
 							</div>
-							<p class="white-text">herlin.jamin@moe.gov.my</p>
+							<p class="white-text">rozita@moe.gov.my</p>
 						</div>
 						<!-- /testimonial -->
 
