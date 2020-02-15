@@ -53,8 +53,8 @@
 					<!-- Logo -->
 					<div class="navbar-brand">
 						<a href="index.php">
-							<img class="logo" src="img/logokpm.png" alt="logo">
-							<img class="logo-alt" src="img/logokpm.png" alt="logo">
+							<img class="logo" src="img/logo.png" alt="logo">
+							<img class="logo-alt" src="img/logo-alt.png" alt="logo">
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -95,7 +95,7 @@
 					<!-- home content -->
 					<div class="col-md-10 col-md-offset-1">
 						<div class="home-content">
-							<h1 class="white-text">epenilai Buku Teks KPM</h1>
+							<h1 class="white-text">e-Penilai Buku Teks KPM</h1>
 							<p class="white-text">Pembangunan aplikasi ini bertujuan untuk memudahkan urusan pendaftaran bakal penilai dan penilai buku teks dalam setiap urusan mesyuarat/bengkel yang dijalankan. Diharap dapat memberi manfaat kepada semua pihak yang terlibat sebagai pengguna dalam aplikasi ini. Terima kasih.
 							</p>
 				    </div>
@@ -173,7 +173,7 @@
 	<div id="team" class="section md-padding">
                 <!-- Section header -->
 				<div class="section-header text-center">
-					<h2 class="title"><a font-color:white;>Team Sektor Penghasilan Buku Teks</a></h2>
+					<h2 class="title"><a font-color:white;>Pengurusan Sektor Penghasilan Buku Teks</a></h2>
 				</div>
 				<!-- /Section header -->
 		<!-- Background Image -->
@@ -197,20 +197,42 @@
 							<div class="testimonial-meta">
 								<img src="#" alt="">
 								<h3 class="white-text">Dr Zainal Rashid bin Kamaruddin</h3>
-								<span>Ketua Penolong Pengarah</span>
+								<span>Timbalan Pengarah</span>
 							</div>
-							<p class="white-text">shaiful.abdul@moe.gov.my</p>
+							<p class="white-text">zainal.rashid@moe.gov.my</p>
 						</div>
 						<!-- /testimonial -->
 
 						<!-- testimonial -->
 						<div class="testimonial">
 							<div class="testimonial-meta">
-								<img src=".#" alt="">
-								<h3 class="white-text">Datin Noriza binti Asmuni</h3>
+								<img src="#" alt="">
+								<h3 class="white-text">RABIAH BINTI MOHAMED IDRISS</h3>
 								<span>KPP Sains Sosial</span>
 							</div>
-							<p class="white-text">noriza.asmuni@moe.gov.my</p>
+							<p class="white-text">rabiahm@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+						
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">DATIN NORIZA BINTI ASMUNI</h3>
+								<span>KPP Sains Sosial</span>
+							</div>
+							<p class="white-text">norizaasmuni@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+						
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">ENCIK AZMI BIN AHMAD</h3>
+								<span>KPP Sains Sosial</span>
+							</div>
+							<p class="white-text">azmiahmad@moe.gov.my</p>
 						</div>
 						<!-- /testimonial -->
                         
@@ -218,10 +240,32 @@
 						<div class="testimonial">
 							<div class="testimonial-meta">
 								<img src="#" alt="">
-								<h3 class="white-text">Puan Roslina binti Ibrahim</h3>
+								<h3 class="white-text">ENCIK AHMAD NOR BAKRI BIN A HAMID</h3>
 								<span>KPP Bahasa & Kesusasteraan</span>
 							</div>
-							<p class="white-text">roslina.ibrahim@moe.gov.my</p>
+							<p class="white-text">bakri.hamidm@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+						
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">PUAN HAJAH ROSLINA BINTI IBRAHIM</h3>
+								<span>KPP Bahasa & Kesusasteraan</span>
+							</div>
+							<p class="white-text">roslina.ibrahimm@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+						
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">ENCIK SAFARI BIN JAMALUDDIN</h3>
+								<span>KPP Bahasa & Kesusasteraan</span>
+							</div>
+							<p class="white-text">safari.jamaludin@moe.gov.my</p>
 						</div>
 						<!-- /testimonial -->
                         
@@ -229,21 +273,65 @@
 						<div class="testimonial">
 							<div class="testimonial-meta">
 								<img src="#" alt="">
-								<h3 class="white-text">Encik Nasir bin Mohamad</h3>
+								<h3 class="white-text">ENCIK ABD RAZAK BIN MOHAMAD YUSOF</h3>
+								<span>KPP Bahasa & Kesusasteraan</span>
+							</div>
+							<p class="white-text">razak.yusof@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+						
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">ENCIK ADI PUTRA BIN SAMSURI</h3>
+								<span>KPP Bahasa & Kesusasteraan</span>
+							</div>
+							<p class="white-text">adi.samsuri@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+                        
+                        <!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">TUAN HAJI NASIR BIN MOHAMAD</h3>
 								<span>KPP Pendidikan Islam</span>
 							</div>
 							<p class="white-text">nasirm@moe.gov.my</p>
 						</div>
 						<!-- /testimonial -->
-                        
-                        <!-- testimonial -->
+						
+						<!-- testimonial -->
 						<div class="testimonial">
 							<div class="testimonial-meta">
 								<img src="#" alt="">
-								<h3 class="white-text">Puan Zurinah binti Rajab</h3>
-								<span>KPP Vokasional dan Teknik</span>
+								<h3 class="white-text">ENCIK AMIRUDDIN@AZMI BIN IBRAHIM</h3>
+								<span>KPP Pendidikan Islam</span>
 							</div>
-							<p class="white-text">zurin@moe.gov.my</p>
+							<p class="white-text">amiruddin.azmi@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+						
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">ENCIK HAZMAN BIN CHE SIDIK</h3>
+								<span>KPP Pendidikan Khas (Rendah)</span>
+							</div>
+							<p class="white-text">hazman.sidik@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+						
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">DATIN SALBIAH BINTI ROSLAN</h3>
+								<span>KPP Pendidikan Khas (Menengah)</span>
+							</div>
+							<p class="white-text">salbiah.roslan@moe.gov.my</p>
 						</div>
 						<!-- /testimonial -->
                         
@@ -251,10 +339,65 @@
 						<div class="testimonial">
 							<div class="testimonial-meta">
 								<img src="#" alt="">
-								<h3 class="white-text">Puan Rozita binti Ayob</h3>
+								<h3 class="white-text">PUAN ZURINAH@ROSMAWATI BINTI RAJAB</h3>
 								<span>KPP Vokasional dan Teknik</span>
 							</div>
-							<p class="white-text">rozita@moe.gov.my</p>
+							<p class="white-text">zurinah.rajab@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+						
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">PUAN HAJAH ROZITA BINTI ROSLI</h3>
+								<span>KPP Vokasional dan Teknik</span>
+							</div>
+							<p class="white-text">rozita.rosli@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+						
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">PUAN PHUA PENG LIN</h3>
+								<span>KPP Vokasional dan Teknik</span>
+							</div>
+							<p class="white-text">peng.linb@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+                        
+                        <!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">ENCIK AZHAR BIN MOHD SHARIFF</h3>
+								<span>KPP Sains dan Matematik</span>
+							</div>
+							<p class="white-text">azhar.sharif@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+						
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">ENCIK AHMAD SABRI BIN IBRAHIM</h3>
+								<span>KPP Sains dan Matematik</span>
+							</div>
+							<p class="white-text">asabri@moe.gov.my</p>
+						</div>
+						<!-- /testimonial -->
+						
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="#" alt="">
+								<h3 class="white-text">ENCIK SHAHARUDDIN BIN MOHD ZIN</h3>
+								<span>KPP Sains dan Matematik</span>
+							</div>
+							<p class="white-text">sharuddin.mzin@moe.gov.my</p>
 						</div>
 						<!-- /testimonial -->
 
@@ -352,7 +495,7 @@
 
 					<!-- footer logo -->
 					<div class="footer-logo">
-						<a href="index.php"><img src="img/logokpm.png" alt="logo"></a>
+						<a href="index.php"><img src="img/logo-alt.png" alt="logo"></a>
 					</div>
 					<!-- /footer logo -->
 
@@ -369,8 +512,7 @@
 
 					<!-- footer copyright -->
 					<div class="footer-copyright">
-					    <p>Penafian: Pihak kami tidak bertanggungjawb sebarang unsur pelagiat, menyalin dan mencetak kandungan oleh mana-mana pihak dalam laman sesawang ini.Laman sesawang ini masih dalam peringkat uji rintis dan tidak boleh diklasifikasikan sebagai sumber rujukan rasmi oleh Kementerian Pendidikan Malaysia</p>
-                        <p>Copyright © 2017. All Rights Reserved. Designed by<a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+					    <p>Penafian: Pihak kami tidak bertanggungjawb sebarang unsur pelagiat, menyalin dan mencetak kandungan oleh mana-mana pihak dalam laman sesawang ini.</p>
 					</div>
 					
 
