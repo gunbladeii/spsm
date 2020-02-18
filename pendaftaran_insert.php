@@ -13,7 +13,7 @@ $tempat=$_POST['tempat'];
 
 if (isset($_POST["submit"])){
   $mysqli->query("INSERT INTO dataBengkel (noIC, nama, jantina, mesyuarat, aliran, judul, tarikh, tahun, tempat) VALUES ('$noIC', '$nama', '$jantina', '$mesyuarat', '$aliran', '$judul', '$tarikh', '$tahun', '$tempat')");
-  header("Location: pendaftaran_insert.php?");
+  header("Location: main_menu.php?");
 }
 
 $colname_Recordset1 = "-1";
