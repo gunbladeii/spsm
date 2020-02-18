@@ -123,7 +123,7 @@ function off() {
                             <img src="images/uploads/<?php echo $row_Recordset2['gambar']; ?>" width="5%" height="5%"class="img-circle"/>
                             <div class="description">
                             	<p>
-	                            	<Strong>Daftar Maklumat Bengkel Baharu</Strong> <br/> Sila lengkapkan semua maklumat berikut:
+	                            	<Strong>Kemaskini Maklumat Bengkel Semasa </Strong> <br/> Sila lengkapkan semua maklumat berikut:
                             	</p>
                             </div>
                         </div>
